@@ -15,9 +15,6 @@
 			clear: both;
 			display: block;
 		}
-		body{
-			display: flex;
-		}
 		div{
 			padding: 20px;
 			background: white;
@@ -25,18 +22,23 @@
 		}
 		#left{
 			width: 200px;
-			flex: none;
+			box-sizing: border-box;
 			margin-right: 20px;
 			position: relative;
+			float: left;
 		}
 		#right{
+			box-sizing: border-box;
 			width: 120px;
 			margin-left: 20px;
+			float: right;
 		}
 		#center{
-			flex: 1;
+			margin-left: 220px;
+			margin-right:140px;
 		}
 		#left .first{
+			box-sizing: border-box;
 			padding: 20px;
 			background: #eee;
 			border: 1px solid #999;
@@ -52,6 +54,7 @@
 			right:0;
 		}
 		#right p{
+			box-sizing: border-box;
 			line-height: 80px;
 			text-align: center;
 			width: 80px;
@@ -72,6 +75,12 @@
 	</style>
 </head>
 <body>
+	<div id="right">
+		<p><span>个人logo</br>80x80</span></p>
+		<p><span>个人logo</br>80x80</span></p>
+		<p><span>个人logo</br>80x80</span></p>
+		<p class="last"><span>个人logo</br>80x80</span></p>
+	</div>
 	<div id="left">
 		<p class="first">团队logo<br>80x80</p>
 		<p class="last">团队名称</p>
@@ -92,12 +101,6 @@
 		<p>
 			百度前端学院（简称ife）是一个由百度人力资源部校园招聘组，百度efe联合出品的面向在校大学生以及对前端技术有兴趣的前端在线学习平台。
 		</p>
-	</div>
-	<div id="right">
-		<p><span>个人logo</br>80x80</span></p>
-		<p><span>个人logo</br>80x80</span></p>
-		<p><span>个人logo</br>80x80</span></p>
-		<p class="last"><span>个人logo</br>80x80</span></p>
 	</div>
 </body>
 </html>
